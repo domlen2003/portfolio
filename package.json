@@ -1,0 +1,24 @@
+{
+	"name": "portfolio",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "turbo run format && prettier --write .",
+		"test": "turbo run test"
+	},
+	"devDependencies": {
+		"@types/node": "^24.0.15",
+		"eslint": "^9.31.0",
+		"prettier": "^3.6.2",
+		"prettier-plugin-svelte": "^3.4.0",
+		"prettier-plugin-tailwindcss": "^0.6.14",
+		"turbo": "^2.5.5",
+		"typescript": "^5.8.3"
+	},
+	"packageManager": "pnpm@10.13.1",
+	"engines": {
+		"node": ">=22"
+	}
+}

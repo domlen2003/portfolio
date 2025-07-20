@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@layer base {
+	html,
+	body,
+	body > div {
+		@apply size-full overflow-hidden;
+	}
+
+	/* Assert non keyboard navigation to have no outline */
+	*:focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	*:focus {
+		outline-width: 4px;
+		outline-style: solid;
+		outline-offset: 4px;
+	}
+}
