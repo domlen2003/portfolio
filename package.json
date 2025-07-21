@@ -2,7 +2,7 @@
 	"name": "portfolio",
 	"private": true,
 	"scripts": {
-		"build": "turbo run build",
+		"build:color-presentation": "turbo run build --filter=color-presentation...",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"format": "turbo run format && prettier --write .",
