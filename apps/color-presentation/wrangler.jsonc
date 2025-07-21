@@ -19,7 +19,7 @@
 	"workers_dev": false,
 	"routes": [
 		{
-			"pattern": "colors.dominiklenz.de",
+			"pattern": "colors.dominiklenz.com",
 			"custom_domain": true
 		}
 	]
