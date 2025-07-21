@@ -1,1 +1,3 @@
-<div class="bg-red-500">Hello World!</div>
+<div class="bg-red-500">
+    Hello World!
+</div>
