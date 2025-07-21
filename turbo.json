@@ -6,6 +6,7 @@
 			"inputs": ["$TURBO_DEFAULT$", ".env*"],
 			"outputs": [".svelte-kit/**"]
 		},
+		"build": {},
 		"lint": {},
 		"format": {
 			"cache": false
