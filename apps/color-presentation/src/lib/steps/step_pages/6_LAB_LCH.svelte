@@ -1,0 +1,1 @@
+<!-- The ideas of LAB and LCH color spaces -> pickers cartesic vs. polar system -->

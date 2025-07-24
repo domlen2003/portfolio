@@ -1,0 +1,1 @@
+<!-- HSL lightness/contrast changes (show color slider card -> low contrast colors), no wide gamut adaptation -->
