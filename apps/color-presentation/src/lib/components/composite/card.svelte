@@ -40,19 +40,18 @@
         <div class="relative w-full h-[22.5rem] overflow-hidden bg-cover bg-no-repeat bg-center z-0"
              style="background-image: url('{imageUrl}')">
             <label>
-                <div class="absolut size-full cursor-pointer appearance-none" />
+                <div class="absolut size-full cursor-pointer appearance-none" ></div>
                 <input accept="image/*" class="sr-only" onchange={(e)=>onFileSelected(e)} type="file" />
             </label>
-            <button
-                    class="absolute flex size-8 top-2 right-2 justify-center items-center border-none rounded-full bg-reactive-1-100 z-10">
+            <button class="absolute flex size-8 top-2 right-2 justify-center items-center border-none rounded-full bg-reactive-1-100 z-10">
                 <svg fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
                     <path class="fill-reactive-1-700"
                           d="M3 2C3 1.44772 3.44772 1 4 1H12C12.5523 1 13 1.44772 13 2V13.2338C13 14.0111 12.152 14.4912 11.4855 14.0913L8.5145 12.3087C8.19781 12.1187 7.80219 12.1187 7.4855 12.3087L4.5145 14.0913C3.84797 14.4912 3 14.0111 3 13.2338V2Z"
                     />
                 </svg>
             </button>
-            <div
-                    class="absolute w-full h-56 bottom-0 bg-gradient-to-b from-transparent to-reactive-1-50 z-10 pointer-events-none" />
+            <div class="absolute w-full h-56 bottom-0 bg-gradient-to-b from-transparent to-reactive-1-50 z-10 pointer-events-none">
+            </div>
         </div>
         <div class="px-6 pb-4">
             <div class="relative -mt-[20%] pb-4 text-2xl font-black z-30 text-reactive-2-700 font-stretched">

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "../build/generated-theme.css";
 
 :root {
     --background: oklch(0.2679 0.0036 106.6427);
