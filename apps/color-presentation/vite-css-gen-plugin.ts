@@ -15,10 +15,28 @@ export default function generateCSSPlugin() {
         }
     };
 }
-const TAILWIND_LIGHTNESS_INDICES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950] as const;
-const TAILWIND_LIGHTNESS_STEPS = [97.7206622236114, 95.04731356824277, 90.56018156455355, 84.04318784419276, 76.11837587906905, 68.26031987906848, 59.777332466015054, 51.49571935899158, 44.61247059531527, 39.45339024365322, 27.79151446895131] as const;
-//TODO
-const MAX_CONTINUOUS_CHROMA = [] as const;
+const TAILWIND_LIGHTNESS_INDICES = [
+    50, 100, 200,
+    300, 400, 500,
+    600, 700, 800,
+    900, 950
+] as const;
+const TAILWIND_LIGHTNESS_STEPS = [
+    97.72, 95.05, 90.56,
+    84.04, 76.12, 68.26,
+    59.78, 51.49, 44.61,
+    39.45, 27.79
+] as const;
+const MAX_CONTINUOUS_CHROMA = [
+    0.0147, 0.0258, 0.0505,
+    0.0872, 0.1339, 0.1645,
+    0.144, 0.1241, 0.1075,
+    0.095, 0.0669
+] as const;
+
+function chromaForIndex(index: number) {
+    return (MAX_CONTINUOUS_CHROMA[index]! * 100 * 1.2).toFixed(2);
+}
 
 function createReactiveHuedColor(reactiveColorName: string, hueVarName: string) {
     return `
@@ -26,7 +44,7 @@ function createReactiveHuedColor(reactiveColorName: string, hueVarName: string) 
 			${hueVarName}: 0;
 		}
 		@theme inline{
-			${TAILWIND_LIGHTNESS_INDICES.map((index, i) => '--color-' + reactiveColorName + '-' + index + ': oklch(' + TAILWIND_LIGHTNESS_STEPS[i] + '% 20% var(' + hueVarName +'));').join('\n\t')}
+			${TAILWIND_LIGHTNESS_INDICES.map((index, i) => '--color-' + reactiveColorName + '-' + index + ': oklch(' + TAILWIND_LIGHTNESS_STEPS[i] + '% ' + chromaForIndex(i) + '% var(' + hueVarName + '));').join('\n\t')}
 		}
 	`;
 }
