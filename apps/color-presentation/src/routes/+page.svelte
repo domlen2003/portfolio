@@ -17,8 +17,11 @@
             pageStack.nextPage();
         } else if (event.key === 'ArrowLeft') {
             pageStack.previousPage();
+        } else if (event.key === 'e' && event.ctrlKey) {
+            pageStack.jumpToEnd();
         }
     }
+
 </script>
 
 <svelte:window on:keydown={onKeyDown}/>
@@ -29,7 +32,7 @@
             {#key pageStack.current}
                 <div class="flex flex-col size-full" in:fade={{ delay: 500, duration: 500 }}
                      out:fade={{delay:0, duration:500}}>
-                    <ScrollArea orientation="vertical">
+                    <ScrollArea orientation="vertical" class="size-full">
                         <CurrentPage/>
                     </ScrollArea>
                 </div>

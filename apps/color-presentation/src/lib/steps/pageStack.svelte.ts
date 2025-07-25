@@ -17,11 +17,13 @@ export class PageStack<T extends string> {
 
     readonly estimatedRemainingPages = $derived.by(() => {
         let currentPage = this.current!;
-        let remaining = -1;
+        let remaining = 0;
 
         while (currentPage !== null) {
-            remaining++;
             currentPage = this.pagesMap![currentPage]!.computeNextPage()!;
+            if (currentPage !== null) {
+                remaining++;
+            }
         }
 
         return remaining;
@@ -51,6 +53,10 @@ export class PageStack<T extends string> {
         }
     }
 
+    hasNextPage(){
+        return this.pagesMap![this.current!].computeNextPage() !== null;
+    }
+
     previousPage() {
         if (this.stack!.value.length > 1) {
             this.stack!.value.pop();
@@ -61,5 +67,28 @@ export class PageStack<T extends string> {
 
     clear() {
         this.stack!.reset();
+    }
+
+    jumpBackTo(page: T) {
+        if (!this.pagesMap![page]) {
+            console.warn(`Cannot jump to non-existing page: ${page}`);
+            return;
+        }
+        const index = this.stack!.value.indexOf(page);
+        if (index === -1) {
+            console.warn(`Cannot jump to page not in stack: ${page}`);
+            return;
+        }
+        this.stack!.value = this.stack!.value.slice(0, index + 1);
+    }
+
+    jumpToEnd() {
+        let currentPage = this.current!;
+        while (currentPage !== null) {
+            currentPage = this.pagesMap![currentPage]!.computeNextPage()!;
+            if (currentPage !== null) {
+                this.stack!.value.push(currentPage);
+            }
+        }
     }
 }

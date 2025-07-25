@@ -1,1 +1,0 @@
-<!-- HSL to RGB calc, colorpicker, show working card (fixed hue), gradients -->

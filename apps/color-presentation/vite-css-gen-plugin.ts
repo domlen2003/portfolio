@@ -35,7 +35,7 @@ const MAX_CONTINUOUS_CHROMA = [
 ] as const;
 
 function chromaForIndex(index: number) {
-    return (MAX_CONTINUOUS_CHROMA[index]! * 100 * 1.2).toFixed(2);
+    return (MAX_CONTINUOUS_CHROMA[index]! * 100 * 2).toFixed(2);
 }
 
 function createReactiveHuedColor(reactiveColorName: string, hueVarName: string) {

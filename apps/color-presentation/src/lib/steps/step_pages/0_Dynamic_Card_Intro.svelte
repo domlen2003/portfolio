@@ -1,1 +1,0 @@
-<!-- show holiday card with plain styles -> "its a bit bland lets give it some colors" -> explain hex/rgb( next slide) -> show difficulty of picking/adjusting colors (magically solve) -> "now i have to do that for everything" -->

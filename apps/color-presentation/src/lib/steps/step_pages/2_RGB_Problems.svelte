@@ -1,1 +1,0 @@
-<!-- RGB adjustment, intuitiveness, gradients, bigger color spaces -->

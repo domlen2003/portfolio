@@ -1,1 +1,0 @@
-<!-- graphic of receptor sensitivity -> cie lab color space slice -->

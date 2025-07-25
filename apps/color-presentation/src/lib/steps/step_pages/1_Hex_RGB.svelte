@@ -1,1 +1,0 @@
-<!-- How hex and RGB work, RGB color picker (three sliders/three numbers). -->

@@ -1,1 +1,0 @@
-<!-- color picker, color adjustments, gradients, wide-gamut -->

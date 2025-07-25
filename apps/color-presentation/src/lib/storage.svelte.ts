@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 
 export class LocalStorage<T> {
-    private internalState: T = $state() as T;
+    protected internalState: T = $state() as T;
     readonly key: string;
 
     constructor(key: string, defaultValue: T) {
@@ -67,8 +67,8 @@ export class LocalStorage<T> {
 }
 
 
-export class ResettableLocalStorage<T> extends LocalStorage<T> {
-    private readonly default: T;
+export class ResettableLocalStorage<T> extends LocalStorage<T> implements ResettableStore {
+    protected readonly default: T;
 
     constructor(key: string, defaultValue: T) {
         super(key, defaultValue);
@@ -84,10 +84,16 @@ export class ResettableLocalStorage<T> extends LocalStorage<T> {
     }
 }
 
-export function resetAll(...stores: ResettableLocalStorage<any>[]) {
+export interface ResettableStore {
+    reset(): void;
+
+    isReset(): boolean;
+}
+
+export function resetAll(...stores: ResettableStore[]) {
     stores.forEach(store => store.reset());
 }
 
-export function allReset(...stores: ResettableLocalStorage<any>[]) {
+export function allReset(...stores: ResettableStore[]) {
     return stores.filter(store => store.isReset()).length === stores.length;
 }

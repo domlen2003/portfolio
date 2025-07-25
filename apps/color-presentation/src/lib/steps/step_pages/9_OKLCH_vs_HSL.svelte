@@ -1,1 +1,0 @@
-<!-- Card example with slider HSL vs OKLCH -->
