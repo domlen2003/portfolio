@@ -169,7 +169,7 @@
         scene.add(new THREE.AmbientLight(0xffffff, 0.3));
 
         // Axes: L axis and circles for reference
-        const axesHelper = new THREE.AxesHelper(0.5);
+        //const axesHelper = new THREE.AxesHelper(0.5);
         //scene.add(axesHelper);
 
         // Gamut volume mesh (initially sRGB)
