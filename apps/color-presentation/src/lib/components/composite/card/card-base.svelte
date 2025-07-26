@@ -2,8 +2,8 @@
     let {imageUrl}: { imageUrl?: string } = $props();
 </script>
 
-<div class="w-full h-screen sm:w-80 sm:h-min font-[MG] font-bold font-stretched">
-    <div class="w-full h-full sm:rounded-xl sm:overflow-hidden bg-slate-50">
+<div class="w-80 h-min font-[MG] font-bold font-stretched">
+    <div class="w-full h-full rounded-xl overflow-hidden bg-slate-50">
         <div class="relative w-full h-[22.5rem] overflow-hidden bg-cover bg-no-repeat bg-center z-0"
              style="background-image: url('{imageUrl}')">
             <button aria-label="placeholder button" class="absolute flex size-8 top-2 right-2 justify-center items-center border-none rounded-full bg-slate-100 z-10">

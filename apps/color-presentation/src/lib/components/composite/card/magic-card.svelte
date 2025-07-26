@@ -24,8 +24,8 @@
         image.src = imageUrl;
     });
 </script>
-<div class="w-full h-screen sm:w-80 sm:h-min font-[MG] font-bold font-stretched">
-    <div class="w-full h-full sm:rounded-xl sm:overflow-hidden bg-reactive-1-50"
+<div class="w-80 h-min font-[MG] font-bold font-stretched">
+    <div class="w-full h-full rounded-xl overflow-hidden bg-reactive-1-50"
          style:--reactive-color-1={dominantHue}
          style:--reactive-color-2={complimentaryHue}
     >
