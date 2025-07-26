@@ -7,7 +7,7 @@
 </script>
 
 <!-- show holiday card with plain styles -> "its a bit bland lets give it some colors" -> explain hex/rgb( next slide) -> show difficulty of picking/adjusting colors (magically solve) -> "now i have to do that for everything" -->
-<StepContentsWrapper title='Motivation oder das "rabbithole"' class="flex items-center h-full gap-8">
+<StepContentsWrapper title='Motivation (immer diese Designer...)' class="flex items-center h-full gap-8">
     <div class="flex gap-16">
         <CardBase imageUrl={currentImageSrc}/>
         <div class="flex items-center h-full">

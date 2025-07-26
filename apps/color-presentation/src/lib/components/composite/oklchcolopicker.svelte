@@ -2,7 +2,6 @@
     import {Input} from "$lib/components/ui/input";
     import {Label} from "$lib/components/ui/label";
     import {Slider} from "$lib/components/ui/slider";
-    import {Switch} from "$lib/components/ui/switch";
     import {onMount} from "svelte";
     // Assume Culori and Three.js are installed as dependencies
     import {
@@ -202,7 +201,7 @@
 </script>
 
 <!-- UI Layout -->
-<div class="flex gap-8">
+<div class="flex gap-8 size-full pb-8">
     <div class="flex flex-col gap-4 w-120">
         <!-- Color Preview Swatch -->
         <div class="relative w-full h-24 rounded-lg border shadow-inner transition-colors duration-150 overflow-hidden"
@@ -246,27 +245,14 @@
                 <Input id="a-input" type="number" min="0" max="100" bind:value={a} oninput={onAInput}/>
             </div>
         </div>
-
-        <!-- Format Outputs -->
-        <div class="space-y-2">
-            <Input readonly value={hexString}/>
-        </div>
         <div class="space-y-2">
             <Label>RGB</Label>
             <Input readonly value={rgbString}/>
         </div>
-
-        <!-- Toggles -->
-        <div class="flex items-center gap-4 mt-2">
-            <Label class="flex items-center gap-2">
-                <Switch bind:checked={showWarning}/>
-                Gamut Warning
-            </Label>
-        </div>
     </div>
 
     <!-- 3D Model Canvas -->
-    <div class="w-100" style="display: block; ">
+    <div class="w-100 h-full" style="display: block; ">
         <canvas bind:this={canvasEl} class="w-full h-full rounded-lg border"></canvas>
     </div>
 </div>

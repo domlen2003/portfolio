@@ -15,10 +15,10 @@
             - also auf farben "verzichten"?
         </p>
     </div>
-    <div class="flex size-full px-10 pb-10 justify-center">
+    <div class="flex size-full p-10 justify-center">
 
-        <div class="flex justify-center items-center h-full p-10 rounded-xl bg-foreground">
-            <img src="/color-gamut.webp" alt="Farbräume" class="size-full"/>
+        <div class="flex justify-center items-center h-full rounded-xl bg-foreground">
+            <img src="/color-gamut.webp" alt="Farbräume" class="w-full h-max shrink-0"/>
         </div>
 
     </div>

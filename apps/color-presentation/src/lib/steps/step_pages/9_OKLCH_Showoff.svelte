@@ -5,7 +5,7 @@
 
     let currentImageSrc = $state<string | undefined>();
 </script>
-<StepContentsWrapper title='Das Ende des "rabbithole"' class="flex items-center h-full gap-8">
+<StepContentsWrapper title='Endlich Farben im Urlaub' class="flex items-center h-full gap-8">
     <div class="flex gap-16">
         <MagicCard imageUrl={currentImageSrc}/>
         <div class="flex items-center h-full">
