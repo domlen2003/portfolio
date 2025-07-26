@@ -6,7 +6,7 @@
     let hue = $state(0);
 </script>
 <!-- HSL to RGB calc, colorpicker, show working card (fixed hue), gradients -->
-<StepContentsWrapper title='Idee von HSL' class="flex items-center h-full gap-8">
+<StepContentsWrapper title='Unsere Karte in HSL' class="flex items-center h-full gap-8">
     <div class="flex gap-16">
         <div class="w-80">
             <Hslpicker bind:hue={hue}/>

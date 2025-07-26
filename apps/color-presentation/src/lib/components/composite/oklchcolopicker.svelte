@@ -201,7 +201,7 @@
 </script>
 
 <!-- UI Layout -->
-<div class="flex gap-8 size-full pb-8">
+<div class="flex gap-8 size-full pb-8 justify-center">
     <div class="flex flex-col gap-4 w-120">
         <!-- Color Preview Swatch -->
         <div class="relative w-full h-24 rounded-lg border shadow-inner transition-colors duration-150 overflow-hidden"

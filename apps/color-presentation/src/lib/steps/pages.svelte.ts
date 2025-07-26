@@ -3,7 +3,8 @@ import Start from "$lib/steps/step_pages/0_Start.svelte";
 import DynamicCardIntro from "$lib/steps/step_pages/1_Dynamic_Card_Intro.svelte";
 import HexRgb from "$lib/steps/step_pages/2_Hex_RGB.svelte";
 import RgbProblems from "$lib/steps/step_pages/3_RGB_Problems.svelte";
-import Hsl from "$lib/steps/step_pages/4_HSL.svelte";
+import Hsl from "$lib/steps/step_pages/4_1_HSL.svelte";
+import HslCard from "$lib/steps/step_pages/4_2_HSL_Card.svelte";
 import HslProblems from "$lib/steps/step_pages/5_HSL_Problems.svelte";
 import Eyes from "$lib/steps/step_pages/6_Eyes.svelte";
 import Oklch from "$lib/steps/step_pages/7_OKLCH.svelte";
@@ -17,6 +18,7 @@ type Pages =
     | 'hex'
     | 'rgb_problems'
     | 'hsl'
+    | 'hsl_card'
     | 'hsl_problems'
     | 'eyes'
     | 'oklch'
@@ -43,6 +45,10 @@ const basePageMap: Partial<Record<Pages, StepPage<Pages>>> = {
     },
     hsl:{
         page: Hsl,
+        computeNextPage: () => 'hsl_card'
+    },
+    hsl_card: {
+        page: HslCard,
         computeNextPage: () => 'hsl_problems'
     },
     hsl_problems: {
